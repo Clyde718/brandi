@@ -1,18 +1,51 @@
 @import "base/fonts";
 @import "base/vars";
-
 @import "libs/libs";
 
 * {
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 .container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0px 15px;
+  width: 100%;
+}
+.content {
+  flex: 1 1 auto;
+}
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 @import "blocks/header";
-@import "blocks/content";
-@import "blocks/footer";
+@import "blocks/burger";

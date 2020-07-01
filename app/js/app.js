@@ -1,4 +1,15 @@
 $(document).ready(function () {
-  console.log('Hello Wordfsdfsdfdld')
-  console.log('Clyde Shelton 3');
-})
+  // header-slider
+  $('.slider').slick({
+    dots: true,
+    arrows: false,
+    appendDots: $('.header__content'),
+    // autoplay: true
+  });
+
+  // burger-menu
+  $('.header__burger').click(function (event) {
+    $('.header__burger,.header__nav').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});

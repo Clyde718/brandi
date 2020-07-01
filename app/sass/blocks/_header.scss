@@ -1,22 +1,232 @@
 .header {
-  background-color: teal;
-
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  min-height: 800px;
+  padding: 0px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    min-height: 600px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
   &__row {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 80px;
     align-items: center;
   }
-
-  &__item {
+  &__logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+  }
+  &__signature {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: $color-white;
+    font-weight: 300;
+    display: block;
+    margin: 0px 0px -7px 50px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: $color-white;
+      top: 0;
+      left: -21px;
+    }
+  }
+  &__burger {
+    display: none;
+  }
+  &__menu {
+    position: relative;
+    z-index: 2;
+  }
+  &__menu-item {
+    display: inline-flex;
+    list-style: none;
+    margin: 0px 0px 0px 32px;
+    transition: all 0.2s ease;
+    border-top: 1px solid transparent;
+    a {
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: $color-white;
+      font-weight: 400;
+      transition: all 0.5s ease;
+      display: inline-block;
+      &:hover {
+        color: $mod-text-color;
+      }
+    }
+  }
+  &__content {
+    flex: 1 1 auto;
+    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: orange;
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
+    align-items: flex-end;
+    padding: 0px 15px 100px 15px;
+    position: relative;
+  }
+  &__slider {
+    min-width: 0;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  &__social-link {
+    text-decoration: none;
+    display: block;
+    margin: 0px 9px;
   }
 }
-.container {
+
+.logo {
+  display: block;
+  width: 90px;
+  a {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
+}
+// =============================
+.slider {
+  min-width: 0;
+  &__title {
+    margin: 0px 0px 30px 0px;
+  }
+  &__subtitle {
+    font-size: 48px;
+    color: $color-white;
+    font-weight: 300;
+    margin: 0px 0px 35px 0px;
+    @media (max-width: 767px) {
+      font-size: 36px;
+    }
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
+    @media (max-width: 366px) {
+      font-size: 22px;
+    }
+    span {
+      color: $mod-text-color;
+    }
+  }
+  &__description {
+    display: block;
+    font-size: 18px;
+    color: $color-white;
+    font-weight: 300;
+    &::after {
+      position: relative;
+      display: inline-block;
+      content: "";
+      right: -21px;
+      top: 50%;
+      width: 28px;
+      height: 1px;
+      vertical-align: middle;
+      background: $mod-text-color;
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+    &::before {
+      position: relative;
+      display: inline-block;
+      content: "";
+      left: -21px;
+      top: 50%;
+      width: 28px;
+      height: 1px;
+      vertical-align: middle;
+      background: $mod-text-color;
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+}
+.title {
+  font-size: 62px;
+  color: $color-white;
+  font-weight: 300;
+  @media (max-width: 767px) {
+    font-size: 48px;
+  }
+  @media (max-width: 480px) {
+    font-size: 36px;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
+.twitter,
+.facebook,
+.google-plus,
+.dribbble {
+  fill: #4f565d;
+  height: 18px;
+  width: 19px;
+  &:hover {
+    fill: $color-white;
+  }
+}
+
+// ==============================
+// Slider
+.slick-dots {
+  position: relative;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  right: 47px;
+  transform: translateY(-50%);
+  @media (max-width: 480px) {
+    right: 25px;
+  }
+}
+.slick-dots li {
+  list-style: none;
+  margin: 7px 0px;
+  button {
+    border: 1px solid #333a3e;
+    background-color: transparent;
+  }
+}
+.slick-dots li.slick-active button {
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  outline: none;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: $color-white;
+  border-radius: 50%;
 }

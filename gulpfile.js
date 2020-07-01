@@ -85,7 +85,8 @@ function libs_js() {  // Сбока всех библиотек Java Script
 function libs_css() {
   return src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/slick-carousel/slick/slick.css'
+    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/slick-carousel/slick/slick-theme.css'
   ])
     .pipe(concat('_libs.scss'))
     .pipe(dest('app/sass/libs'))

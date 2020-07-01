@@ -1,0 +1,86 @@
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+  /*Делаем размер Шапки меньше*/
+  .header__row {
+    height: 50px;
+  }
+  /*Показываем бургер и задаём стили*/
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 4;
+  }
+  .header__burger:before,
+  .header__burger:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger:after {
+    bottom: 0;
+  }
+  .header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  /**/
+  /*Стилизация меню*/
+  .header__nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1ea78d;
+    z-index: 3;
+    padding: 70px 10px 20px 10px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__nav.active {
+    top: 0;
+  }
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__menu li {
+    margin: 0px 0px 20px 0px;
+    a {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .header__signature {
+    margin: 0 0 -7px 40px;
+  }
+}
