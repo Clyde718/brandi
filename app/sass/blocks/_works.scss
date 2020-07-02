@@ -1,0 +1,122 @@
+.works {
+  padding: 100px 0px 0px 0px;
+  @media (max-width: 767px) {
+    padding: 77px 0px 0px 0px;
+  }
+  &__body {
+  }
+
+  &__description {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0px 15px;
+  }
+
+  &__paragraph {
+    font-size: 18px;
+    line-height: 24px;
+    color: #062033;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__filter {
+    padding: 50px 0px 0px 0px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 42px 0px 0px 0px;
+    min-height: 596px;
+  }
+
+  &__column {
+    flex: 0 1 25%;
+    @media (max-width: 992px) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: 480px) {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.filter {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .active {
+      background-color: #0eb493;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    color: #062033;
+    font-weight: 700;
+    list-style: none;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+// block
+.works-item {
+  height: 298px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  &:hover {
+    .works-item__inner {
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+    }
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 180, 147, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+  &__body {
+    text-align: center;
+    .eye {
+      fill: $color-white;
+      width: 30px;
+      height: 40px;
+    }
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 22px;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-white;
+    font-weight: 700;
+    margin: 0px 0px 12px 0px;
+  }
+  &__signature {
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-white;
+    font-weight: 400;
+  }
+}
