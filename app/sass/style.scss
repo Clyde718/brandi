@@ -46,9 +46,17 @@ body {
 body {
   font-family: "Open Sans", sans-serif;
 }
+.heart {
+  width: 18px;
+  height: 14px;
+  fill: #000;
+}
 
 @import "blocks/header";
 @import "blocks/burger";
 @import "blocks/features";
 @import "blocks/works";
 @import "blocks/team";
+@import "blocks/facts";
+@import "blocks/discuss";
+@import "blocks/footer";

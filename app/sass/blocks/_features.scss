@@ -1,6 +1,12 @@
 .features {
   background-color: #f4f7f9;
   padding: 77px 0px 54px 0px;
+  @media (max-width: 480px) {
+    padding: 57px 0px 44px 0px;
+  }
+  @media (max-width: 320px) {
+    padding: 47px 0px 34px 0px;
+  }
   &__heading {
     margin: 0px 0px 68px 0px;
   }
@@ -89,22 +95,20 @@
       display: inline-block;
       content: "";
       right: -17px;
-      top: 50%;
+      top: -7px;
       width: 90px;
       height: 1px;
-      vertical-align: middle;
-      background: #dce1e5;
+      background: #000;
     }
     &::before {
       position: relative;
       display: inline-block;
       content: "";
       left: -17px;
-      top: 50%;
+      top: -7px;
       width: 90px;
       height: 1px;
-      vertical-align: middle;
-      background: #dce1e5;
+      background: #000;
     }
   }
 }

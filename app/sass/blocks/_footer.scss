@@ -1,0 +1,144 @@
+.footer {
+  background-color: #1ea78d;
+  padding: 100px 0px 60px 0px;
+  color: $color-white;
+  @media (max-width: 767px) {
+    padding: 90px 0px 50px 0px;
+  }
+  @media (max-width: 480px) {
+    padding: 70px 0px 40px 0px;
+  }
+  &__row {
+    display: flex;
+    margin: 0px -15px;
+    min-height: 180px;
+    flex-wrap: wrap;
+  }
+
+  &__columns {
+    flex: 0 1 25%;
+    padding: 0px 15px;
+    &:last-child {
+      padding: 0px 15px 0px 28px;
+    }
+    @media (max-width: 991px) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: 767px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__item {
+  }
+
+  &__info {
+  }
+
+  &__paragraph {
+    margin: 46px 0px 0px 0px;
+    p {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+
+  &__subscribe {
+  }
+
+  &__subscribe-title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__subscribe-select {
+    width: 100%;
+    max-width: 271px;
+    height: 45px;
+    border: 2px solid $color-white;
+    border-radius: 4px;
+    margin: 45px 0px 23px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .arrow {
+      width: 45px;
+      height: 25px;
+      fill: $color-white;
+      cursor: pointer;
+    }
+  }
+
+  &__subscribe-descr {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  &__explore {
+  }
+
+  &__explore-title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__explore-col {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0px 0px 0px;
+  }
+
+  &__explore-name {
+    span {
+      display: block;
+      font-size: 13px;
+      line-height: 32px;
+    }
+  }
+
+  &__explore-links {
+    a {
+      display: block;
+      font-size: 13px;
+      line-height: 32px;
+      font-weight: 600;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+
+  &__created {
+    margin: 72px 0px 0px 0px;
+  }
+
+  &__created-top {
+    font-size: 13px;
+    line-height: 24px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: #000;
+      left: -12px;
+    }
+  }
+
+  &__created-bottom {
+    color: #062033;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 50px 0px 0px 0px;
+  }
+  .heart {
+    margin: 0px 12px 0px 8px;
+  }
+}
+.theme {
+  color: #062033;
+  font-weight: 600;
+}

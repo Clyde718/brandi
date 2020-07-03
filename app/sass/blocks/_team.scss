@@ -1,5 +1,11 @@
 .team {
   padding: 100px 0px 120px 0px;
+  @media (max-width: 480px) {
+    padding: 57px 0px 44px 0px;
+  }
+  @media (max-width: 320px) {
+    padding: 47px 0px 34px 0px;
+  }
   &__row {
     display: flex;
     margin: 0px -12px;
@@ -7,6 +13,9 @@
     min-height: 0;
     @media (max-width: 1120px) {
       margin: 105px -7px 0px -7px;
+    }
+    @media (max-width: 480px) {
+      margin: 50px -7px 0px -7px;
     }
   }
 
@@ -37,6 +46,9 @@
   }
   .slick-dots li.slick-active button {
     background-color: #062033;
+  }
+  &__heading {
+    margin: 0px 0px 68px 0px;
   }
 }
 
