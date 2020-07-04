@@ -52,6 +52,20 @@ body {
   fill: #000;
 }
 
+// works-img
+@for $i from 1 through 8 {
+  .works-item_bg-#{$i} {
+    background: url(../images/dest/works/0#{$i}.png) center / cover no-repeat;
+  }
+}
+
+// team-img
+@for $i from 1 through 10 {
+  .team-item__img-#{$i} {
+    background: url(../images/dest/team/0#{$i}.png) center / cover no-repeat;
+  }
+}
+
 @import "blocks/header";
 @import "blocks/burger";
 @import "blocks/features";

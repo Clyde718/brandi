@@ -77,9 +77,6 @@
 // block
 .works-item {
   height: 298px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   cursor: pointer;
   &:hover {
     .works-item__inner {
@@ -129,3 +126,5 @@
     font-weight: 400;
   }
 }
+
+// works-item_bg-1

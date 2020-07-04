@@ -203,8 +203,5 @@
 
 .map {
   min-height: 215px;
-  background: url(../../images/dest/map.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../images/dest/map.png) center / cover no-repeat;
 }

@@ -9,6 +9,7 @@ const imagemin = require('gulp-imagemin');                      // Подклю�
 const newer = require('gulp-newer');                            // Подключаем модуль gulp-newer
 const del = require('del');                                     // Подключаем модуль del
 const sourcemaps = require('gulp-sourcemaps');                  // gulp-sourcemaps
+// const svgSprite = require('gulp-svg-sprite');
 
 // Определяем логику работы Browsersync
 function browsersync() {
@@ -18,8 +19,9 @@ function browsersync() {
     // Указываем папку сервера  
     notify: false,
     // Отключаем уведомления
-    online: true
+    online: true,
     // Режим работы: true или false
+    port: 3000
   })
 }
 
@@ -59,10 +61,11 @@ function scripts() {
 
 
 function images() {
-  return src('app/images/src/**/*') // Берём все изображения из папки источника
+  return src('app/images/src/**/*.{jpg,png,svg,gif,ico,webp}') // Берём все изображения из папки источника
     .pipe(newer('app/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin()) // Сжимаем и оптимизируем изображеня
     .pipe(dest('app/images/dest/')) // Выгружаем оптимизированные изображения в папку назначения
+    .pipe(browserSync.stream())
 }
 
 // Вспомогательный таск
@@ -112,13 +115,13 @@ function buildcopy() {
 
 function startwatch() {
   // Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
-  watch(['app/**/*.js', '!app/**/*.min.js'], scripts); // тригер
+  watch(['app/js/**/*.js', '!app/js/**/*.min.js'], scripts); // тригер
   // Мониторим файлы препроцессора на изменения
   watch(['app/sass/**/*.sass', 'app/sass/**/*.scss'], styles);
   // Мониторим файлы HTML на изменения
   watch('app/**/*.html').on('change', browserSync.reload);
   // Мониторим папку-источник изображений и выполняем images(), если есть изменения
-  watch('app/images/src/**/*', images);
+  watch('app/images/src/**/*.{jpg,png,svg,gif,ico,webp}', images);
 }
 
 
