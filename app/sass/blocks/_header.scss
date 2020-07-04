@@ -24,7 +24,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 70px;
     align-items: center;
   }
   &__logo {
@@ -99,6 +99,27 @@
     text-decoration: none;
     display: block;
     margin: 0px 9px;
+  }
+  .active {
+    background-color: rgba(16, 22, 54, 1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  }
+  &__max {
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
+  }
+
+  .slick-dots {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    right: 48px;
+    transform: translateY(-50%);
+    @media (max-width: 480px) {
+      right: 15px;
+    }
   }
 }
 
@@ -199,16 +220,6 @@
 
 // ==============================
 // Slider
-.slick-dots {
-  z-index: 2;
-  position: relative;
-  top: 50%;
-  right: 47px;
-  transform: translateY(-50%);
-  @media (max-width: 480px) {
-    right: 25px;
-  }
-}
 .slick-dots li {
   list-style: none;
   margin: 7px 0px;

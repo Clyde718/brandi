@@ -14,26 +14,28 @@
   <div class="wrapper">
     <div class="content">
       <header class="header" style="background: url(../images/dest/header-bg.jpg);">
-        <div class="container">
-          <div class="header__row">
-            <div class="header__logo">
-              <a href="#" class="logo">
-                <img src="icons/header-logo.png" alt="header-logo">
-              </a>
-              <span class="header__signature">I’am your tag line</span>
+        <div class="header__max" id="main-nav">
+          <div class="container">
+            <div class="header__row">
+              <div class="header__logo">
+                <a href="#" class="logo">
+                  <img src="icons/header-logo.png" alt="header-logo">
+                </a>
+                <span class="header__signature">I’am your tag line</span>
+              </div>
+              <div class="header__burger">
+                <span></span>
+              </div>
+              <nav class="header__nav">
+                <ul class="header__menu">
+                  <li class="header__menu-item"><a href="#">Home</a></li>
+                  <li class="header__menu-item"><a href="#">Features</a></li>
+                  <li class="header__menu-item"><a href="#">Works</a></li>
+                  <li class="header__menu-item"><a href="#">Team</a></li>
+                  <li class="header__menu-item"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="header__burger">
-              <span></span>
-            </div>
-            <nav class="header__nav">
-              <ul class="header__menu">
-                <li class="header__menu-item"><a href="#">Home</a></li>
-                <li class="header__menu-item"><a href="#">Features</a></li>
-                <li class="header__menu-item"><a href="#">Works</a></li>
-                <li class="header__menu-item"><a href="#">Team</a></li>
-                <li class="header__menu-item"><a href="#">Contact</a></li>
-              </ul>
-            </nav>
           </div>
         </div>
         <div class="header__content">
@@ -85,13 +87,13 @@
         <div class="container">
           <div class="heading features__heading">
             <h3 class="heading__title">Features</h3>
-            <span class="heading__heart"><img src="icons/heart.png" alt="heart"></span>
+            <span class="heading__heart">
+              <svg class="heart">
+                <use xlink:href="icons/sprite.svg#heart"></use>
+              </svg>
+            </span>
           </div>
-
-
           <div class="features__row">
-
-
             <div class="features__columns">
               <div class="features__item">
                 <div class="features__icon">
@@ -128,8 +130,6 @@
                 </div>
               </div>
             </div>
-
-
             <div class="features__columns">
               <div class="features__item">
                 <div class="features__icon">
@@ -166,8 +166,6 @@
                 </div>
               </div>
             </div>
-
-
             <div class="features__columns">
               <div class="features__item">
                 <div class="features__icon">
@@ -204,27 +202,26 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="features__dots"></div>
         </div>
       </section>
 
-
       <section class="works">
         <div class="works__body">
-          <div class="heading features__heading">
+          <div class="heading works__heading">
             <h3 class="heading__title">Works</h3>
-            <span class="heading__heart"><img src="icons/heart.png" alt="heart"></span>
+            <span class="heading__heart">
+              <svg class="heart">
+                <use xlink:href="icons/sprite.svg#heart"></use>
+              </svg>
+            </span>
           </div>
-
           <div class="works__description">
             <p class="works__paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
               doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
           </div>
-
           <div class="works__filter">
-
             <nav class="filter">
               <ul class="filter__list">
                 <li data-filter="1" class="filter__item active">All</li>
@@ -234,11 +231,7 @@
                 <li data-filter="5" class="filter__item">Photography</li>
               </ul>
             </nav>
-
-
             <div class="works__items">
-
-
               <div class="works__column f_branding f_2">
                 <div class="works-item works__item" style="background: url(../images/dest/works/01.png);">
                   <div class="works-item__inner">
@@ -359,10 +352,7 @@
                   </div>
                 </div>
               </div>
-
             </div>
-
-
           </div>
         </div>
       </section>
@@ -370,17 +360,18 @@
       <section class="team">
         <div class="container">
           <div class="works__body">
-            <div class="heading features__heading">
-              <h3 class="heading__title">Works</h3>
-              <span class="heading__heart"><img src="icons/heart.png" alt="heart"></span>
+            <div class="heading team__heading">
+              <h3 class="heading__title">Meet Our Team</h3>
+              <span class="heading__heart">
+                <svg class="heart">
+                  <use xlink:href="icons/sprite.svg#heart"></use>
+                </svg>
+              </span>
             </div>
-
             <div class="works__description">
               <p class="works__paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
             </div>
-
-
             <div class="team__row">
               <div class="team__columns">
                 <div class="team__item team-item">
@@ -522,8 +513,6 @@
                   </div>
                 </div>
               </div>
-
-
               <div class="team__columns">
                 <div class="team__item team-item">
                   <div class="team-item__img" style="background: url(../images/dest/team/01.png);">
@@ -735,24 +724,22 @@
                 </div>
               </div>
             </div>
-
             <div class="team__dots"></div>
           </div>
         </div>
       </section>
 
-
       <section class="facts" style="background: url(../images/dest/some-fun-facts.jpg);">
         <div class="container">
-          <div class="heading features__heading">
+          <div class="heading facts__heading">
             <h3 class="heading__title">Some Fun Facts</h3>
-            <span class="heading__heart"><img src="icons/heart.png" alt="heart"></span>
+            <span class="heading__heart">
+              <svg class="heart">
+                <use xlink:href="icons/sprite.svg#heart"></use>
+              </svg>
+            </span>
           </div>
-
-
           <div class="facts__row">
-
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -766,7 +753,6 @@
                 </div>
               </div>
             </div>
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -780,7 +766,6 @@
                 </div>
               </div>
             </div>
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -794,7 +779,6 @@
                 </div>
               </div>
             </div>
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -808,19 +792,19 @@
                 </div>
               </div>
             </div>
-
-
-
-
           </div>
         </div>
       </section>
 
       <section class="discuss">
         <div class="container">
-          <div class="heading features__heading">
+          <div class="heading discuss__heading">
             <h3 class="heading__title">Let’s Discuss</h3>
-            <span class="heading__heart"><img src="icons/heart.png" alt="heart"></span>
+            <span class="heading__heart">
+              <svg class="heart">
+                <use xlink:href="icons/sprite.svg#heart"></use>
+              </svg>
+            </span>
           </div>
           <div class="discuss__text">
             <p class="discuss__paragraph">Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -845,10 +829,9 @@
                   <h4 class="discuss__form-title">Say hello!</h4>
                   <!-- Сама форма отдельный блок -->
                   <form class="form" action="#">
-                    <input class="form__text" type="text" placeholder="Name">
-                    <input class="form__email" type="email" placeholder="Email">
+                    <input class="form__text" type="text" placeholder="Name" required>
+                    <input class="form__email" type="email" placeholder="Email" required>
                     <input class="form__message" type="text" placeholder="Message">
-
                     <div class="form__send">
                       <svg class="envelope">
                         <use xlink:href="icons/sprite.svg#envelope"></use>
@@ -896,21 +879,24 @@
 
       <div class="map">
       </div>
+
     </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__row">
           <div class="footer__columns">
             <div class="footer__item">
-              <a href="#" class="logo">
-                <img src="icons/header-logo.png" alt="footer-logo">
-              </a>
-              <div class="footer__paragraph">
-                <p>
-                  eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
-                </p>
+              <div class="footer__info">
+                <a href="#" class="logo">
+                  <img src="icons/header-logo.png" alt="footer-logo">
+                </a>
+                <div class="footer__paragraph">
+                  <p>
+                    eusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -918,7 +904,11 @@
             <div class="footer__item">
               <div class="footer__subscribe">
                 <span class="footer__subscribe-title">Subscribe</span>
-                <div class="footer__subscribe-select"></div>
+                <div class="footer__subscribe-select">
+                  <svg class="arrow">
+                    <use xlink:href="icons/sprite.svg#arrow"></use>
+                  </svg>
+                </div>
                 <span class="footer__subscribe-descr">eusmod tempor incididunt ut labore et dolore magna
                   aliqua.</span>
               </div>
@@ -949,7 +939,12 @@
             <div class="footer__item">
               <div class="footer__created">
                 <div class="footer__created-top">
-                  Created with by <span class="theme">themecurve</span>,
+                  Created with
+                  <svg class="heart">
+                    <use xlink:href="icons/sprite.svg#heart"></use>
+                  </svg>
+                  by
+                  <span class="theme">themecurve</span>,
                   exclusive for kreativeshowcase
                 </div>
                 <div class="footer__created-bottom">
@@ -958,10 +953,6 @@
               </div>
             </div>
           </div>
-
-
-
-
         </div>
       </div>
     </footer>

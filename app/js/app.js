@@ -3,8 +3,7 @@ $(document).ready(function () {
   $('.slider').slick({
     dots: true,
     arrows: false,
-    appendDots: $('.header__content'),
-    // autoplay: true
+    appendDots: $('.header')
   });
 
   // burger-menu
@@ -15,7 +14,7 @@ $(document).ready(function () {
 
 
 
-
+  // features-slider
   $('.features__row').slick({
     dots: true,
     arrows: false,
@@ -40,7 +39,7 @@ $(document).ready(function () {
     ]
   });
 
-
+  // team__row slider
   $('.team__row').slick({
     dots: true,
     arrows: false,
@@ -74,7 +73,7 @@ $(document).ready(function () {
 
 
 
-
+  // filter
   $('.filter__item').on('click', function (event) {
     let i = $(this).data('filter');
 
@@ -93,8 +92,7 @@ $(document).ready(function () {
 
 
 
-
-
+  // number animation
   function countup(className) {
     var countBlockTop = $("." + className).offset().top;
     var windowHeight = window.innerHeight;
@@ -120,11 +118,17 @@ $(document).ready(function () {
 
 
 
+  // sticky header
+  $(window).scroll(function () {
+    var wScroll = $(this).scrollTop();
 
-
-
-
-
-
-
+    if (wScroll > 20) {
+      $('#main-nav').addClass('active');
+      $('#slide_out_menu').addClass('scrolled');
+    }
+    else {
+      $('#main-nav').removeClass('active');
+      $('#slide_out_menu').removeClass('scrolled');
+    };
+  })
 });

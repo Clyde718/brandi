@@ -14,26 +14,28 @@
   <div class="wrapper">
     <div class="content">
       <header class="header" style="background: url(../images/dest/header-bg.jpg);">
-        <div class="container">
-          <div class="header__row">
-            <div class="header__logo">
-              <a href="#" class="logo">
-                <img src="icons/header-logo.png" alt="header-logo">
-              </a>
-              <span class="header__signature">I’am your tag line</span>
+        <div class="header__max" id="main-nav">
+          <div class="container">
+            <div class="header__row">
+              <div class="header__logo">
+                <a href="#" class="logo">
+                  <img src="icons/header-logo.png" alt="header-logo">
+                </a>
+                <span class="header__signature">I’am your tag line</span>
+              </div>
+              <div class="header__burger">
+                <span></span>
+              </div>
+              <nav class="header__nav">
+                <ul class="header__menu">
+                  <li class="header__menu-item"><a href="#">Home</a></li>
+                  <li class="header__menu-item"><a href="#">Features</a></li>
+                  <li class="header__menu-item"><a href="#">Works</a></li>
+                  <li class="header__menu-item"><a href="#">Team</a></li>
+                  <li class="header__menu-item"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="header__burger">
-              <span></span>
-            </div>
-            <nav class="header__nav">
-              <ul class="header__menu">
-                <li class="header__menu-item"><a href="#">Home</a></li>
-                <li class="header__menu-item"><a href="#">Features</a></li>
-                <li class="header__menu-item"><a href="#">Works</a></li>
-                <li class="header__menu-item"><a href="#">Team</a></li>
-                <li class="header__menu-item"><a href="#">Contact</a></li>
-              </ul>
-            </nav>
           </div>
         </div>
         <div class="header__content">
@@ -91,11 +93,7 @@
               </svg>
             </span>
           </div>
-
-
           <div class="features__row">
-
-
             <div class="features__columns">
               <div class="features__item">
                 <div class="features__icon">
@@ -132,8 +130,6 @@
                 </div>
               </div>
             </div>
-
-
             <div class="features__columns">
               <div class="features__item">
                 <div class="features__icon">
@@ -170,8 +166,6 @@
                 </div>
               </div>
             </div>
-
-
             <div class="features__columns">
               <div class="features__item">
                 <div class="features__icon">
@@ -208,7 +202,6 @@
                 </div>
               </div>
             </div>
-
           </div>
           <div class="features__dots"></div>
         </div>
@@ -224,14 +217,11 @@
               </svg>
             </span>
           </div>
-
           <div class="works__description">
             <p class="works__paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
               doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
           </div>
-
           <div class="works__filter">
-
             <nav class="filter">
               <ul class="filter__list">
                 <li data-filter="1" class="filter__item active">All</li>
@@ -241,11 +231,7 @@
                 <li data-filter="5" class="filter__item">Photography</li>
               </ul>
             </nav>
-
-
             <div class="works__items">
-
-
               <div class="works__column f_branding f_2">
                 <div class="works-item works__item" style="background: url(../images/dest/works/01.png);">
                   <div class="works-item__inner">
@@ -366,10 +352,7 @@
                   </div>
                 </div>
               </div>
-
             </div>
-
-
           </div>
         </div>
       </section>
@@ -385,13 +368,10 @@
                 </svg>
               </span>
             </div>
-
             <div class="works__description">
               <p class="works__paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
             </div>
-
-
             <div class="team__row">
               <div class="team__columns">
                 <div class="team__item team-item">
@@ -533,8 +513,6 @@
                   </div>
                 </div>
               </div>
-
-
               <div class="team__columns">
                 <div class="team__item team-item">
                   <div class="team-item__img" style="background: url(../images/dest/team/01.png);">
@@ -746,7 +724,6 @@
                 </div>
               </div>
             </div>
-
             <div class="team__dots"></div>
           </div>
         </div>
@@ -762,11 +739,7 @@
               </svg>
             </span>
           </div>
-
-
           <div class="facts__row">
-
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -780,7 +753,6 @@
                 </div>
               </div>
             </div>
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -794,7 +766,6 @@
                 </div>
               </div>
             </div>
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -808,7 +779,6 @@
                 </div>
               </div>
             </div>
-
             <div class="facts__columns">
               <div class="facts__item">
                 <div class="facts__img">
@@ -822,10 +792,6 @@
                 </div>
               </div>
             </div>
-
-
-
-
           </div>
         </div>
       </section>
@@ -863,10 +829,9 @@
                   <h4 class="discuss__form-title">Say hello!</h4>
                   <!-- Сама форма отдельный блок -->
                   <form class="form" action="#">
-                    <input class="form__text" type="text" placeholder="Name">
-                    <input class="form__email" type="email" placeholder="Email">
+                    <input class="form__text" type="text" placeholder="Name" required>
+                    <input class="form__email" type="email" placeholder="Email" required>
                     <input class="form__message" type="text" placeholder="Message">
-
                     <div class="form__send">
                       <svg class="envelope">
                         <use xlink:href="icons/sprite.svg#envelope"></use>
@@ -988,10 +953,6 @@
               </div>
             </div>
           </div>
-
-
-
-
         </div>
       </div>
     </footer>
