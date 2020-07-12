@@ -49,6 +49,14 @@
   &__heading {
     margin: 0 0 68px 0;
   }
+  .icon-heart {
+    color: #000;
+    font-size: 15px;
+  }
+  .icon-eye {
+    font-size: 25px;
+    color: $color-white;
+  }
 }
 
 .filter {
@@ -81,7 +89,6 @@
   &:hover {
     .works-item__inner {
       opacity: 1;
-      transition: 0.5s ease-in-out;
     }
   }
   &__inner {
@@ -92,6 +99,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transition: 0.3s ease-in-out;
   }
   &__body {
     text-align: center;

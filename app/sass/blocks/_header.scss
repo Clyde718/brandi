@@ -122,6 +122,16 @@
       right: 15px;
     }
   }
+  .icon-twitter,
+  .icon-facebook,
+  .icon-google-plus,
+  .icon-dribbble {
+    color: #4f555d;
+    font-size: 20px;
+    &:hover {
+      color: $color-white;
+    }
+  }
 }
 
 .logo {

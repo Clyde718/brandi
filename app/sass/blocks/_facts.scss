@@ -88,6 +88,17 @@
   &__heading {
     margin: 0 0 68px 0;
   }
+  .icon-heart {
+    color: $color-white;
+    font-size: 15px;
+  }
+  .icon-clock,
+  .icon-group,
+  .icon-start-button,
+  .icon-cup {
+    font-size: 40px;
+    color: $color-white;
+  }
 }
 
 .clock,
